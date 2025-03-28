@@ -1,7 +1,3 @@
-import os
-import sys
-import time
-import PIL.ImageTk
 from tkinter import *
 from tkinter import messagebox, filedialog
 import random
