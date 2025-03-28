@@ -12,14 +12,6 @@ overall_font_size = "14"
 overall_background_button = "#00008B"
 
 
-def resource_path(relative_path):
-    """ This function is used to get the correct path for the image file (e.g., 'logo_02.png') """
-    try:
-        base_path = sys._MEIPASS
-    except Exception:
-        base_path = os.path.abspath(".")
-    return os.path.join(base_path, relative_path)
-
 
 def make_pass_one():
     root.destroy()
@@ -27,17 +19,6 @@ def make_pass_one():
     passgenerator.title("Password Generator")
     passgenerator.config(width=600, height=400)  # Adjusted width for the frame and other content
 
-    # Create a new frame for the image on the left
-    frame_01 = Frame(passgenerator, width=120, height=200, bg="#00008B")
-    frame_01.grid(row=0, column=0)
-
-    # Load and display the image in the new frame
-    photo = PIL.Image.open(resource_path("logo_02.png"))
-    photo = photo.resize((100, 75))  # Resize the image to fit the frame
-    photo = PIL.ImageTk.PhotoImage(photo)
-    label = Button(frame_01, image=photo, bg="#00008B", bd=0, borderwidth=0)
-    label.image = photo  # Behalte eine Referenz, um Garbage Collection zu vermeiden
-    label.place(x=5, y=70)
 
     # Create another frame for the password generator interface
     frame_02 = Frame(passgenerator, width=400, height=200)
@@ -127,17 +108,6 @@ def make_password_file():
     pass_generator_file.title("Password Generator")
     pass_generator_file.config(width=600, height=400)  # Adjusted width for the frame and other content
 
-    # Create a new frame for the image on the left
-    frame_01 = Frame(pass_generator_file, width=210, height=300, bg="#00008B")
-    frame_01.grid(row=0, column=0)
-
-    # Load and display the image in the new frame
-    photo = PIL.Image.open(resource_path("logo_02.png"))
-    photo = photo.resize((200, 150))
-    photo = PIL.ImageTk.PhotoImage(photo)
-    label = Label(frame_01, image=photo, bg="#00008B")
-    label.image = photo
-    label.place(x=0, y=70)
 
     # Create another frame for the password generator interface
     frame_02 = Frame(pass_generator_file, width=450, height=250)
@@ -222,17 +192,7 @@ root = Tk()
 root.title("Password Generator")
 root.config(width=600, height=150)
 
-# Create a frame for the image on the left
-frame_01 = Frame(root, width=130, height=100, bg="#00008B")
-frame_01.grid(row=0, column=0)
 
-# Load and display the image
-photo = PIL.Image.open(resource_path("logo_02.png"))
-photo = photo.resize((100, 75))
-photo = PIL.ImageTk.PhotoImage(photo)
-label = Label(frame_01, image=photo, bg="#00008B")
-label.image = photo  # Keep a reference to avoid garbage collection
-label.place(x=10, y=10)
 
 # Create another frame for the buttons on the right
 frame_02 = Frame(root, width=400, height=100)
