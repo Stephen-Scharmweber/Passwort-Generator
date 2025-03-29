@@ -7,7 +7,6 @@ overall_font = "Righteous"
 overall_font_size = "14"
 overall_background_button = "#00008B"
 
-
 passgenerator = Tk()
 passgenerator.title("Password Generator")
 passgenerator.config(width=600, height=400)  # Adjusted width for the frame and other content
@@ -93,4 +92,3 @@ copy_button = Button(frame_02, text="COPY PASS", font=("Righteous", overall_font
 copy_button.place(x=10, y=150)
 
 passgenerator.mainloop()
-
