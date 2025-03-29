@@ -1,49 +1,46 @@
-# Single Password Generator
+# Single Password Generator / Einzelner Passwort-Generator
 
-`A lightweight GUI application for generating and copying individual passwords, built with Python and Tkinter.`
+`A lightweight GUI for secure passwords / Leichtgewichtige GUI für sichere Passwörter`
 
-## Features
+## Features / Funktionen
 
-- Generate random passwords with customizable length
-- Toggle inclusion of numbers
-- Toggle inclusion of special characters
-- Customizable set of special characters
-- One-click copy to clipboard
-- Clean, simple interface
+- Custom length (8-64 chars) / Länge (8-64 Zeichen)
+- Numbers toggle / Zahlen ein-ausschalten
+- Special characters / Sonderzeichen
+- One-click copy / Ein-Klick-Kopieren
+- Clean interface / Übersichtliches Design
 
-## Requirements
+## Requirements / Voraussetzungen
 
 - Python 3.x
-- Tkinter (usually included with Python)
+- Tkinter (usually included) / Tkinter (meist vorinstalliert)
 
-`1. Run the script: python password_generator.py
-2. Configure your password:
-   - LENGTH: Set password length (default: 9)
-   - NUMBERS: Check to include numbers (0-9)
-   - SPECIAL CHARS: Check to include special characters
-   - Special chars field: Edit the special characters to use (default: !§$%&/()=?+*#-_.:,;<>+-)
-3. Click "GENERATE PASSWORD"
-4. Click "COPY PASS" to copy to clipboard`
+`1. Run script / Skript starten:
+   python password_generator.py
 
-## Customization
+2. Configure / Einstellen:
+   - LENGTH: 12 (default) / Standard: 12
+   - NUMBERS: ☑ (0-9)
+   - SPECIAL CHARS: ☑ (!@#$%)
 
-`You can modify the default values in the code:
-- Change default length: length_entry.insert(0, "9")
-- Change special characters: special_chars_entry.insert(0, r"!§$%&/()=?+*#-_.:,;<>+-")
-- Adjust colors: overall_background_button = "#00008B"
-- Modify fonts: overall_font = "Righteous", overall_font_size = "14"`
+3. Click "GENERATE" / "GENERIEREN"
+4. Click "COPY" / "KOPIEREN"`
 
-## How It Works
+`Customize / Anpassen:
+# In code / Im Code:
+length_entry.insert(0, "12")  # Default length
+special_chars = "!@#$%"  # Custom symbols
+font = "Arial"  # Schriftart`
 
-`1. Password generation uses:
-   - Letters (always included)
-   - Numbers (optional)
-   - Special characters (optional)
-2. Copy functionality:
-   - Auto-generates if empty
-   - Copies to clipboard
-   - Shows confirmation`
+`How it works / Funktionsweise:
+1. Generates using:
+   - Letters (always) / Buchstaben (immer)
+   - Numbers (optional) / Zahlen (optional)
+   - Symbols (optional) / Zeichen (optional)
+2. Copy logic / Kopier-Logik:
+   - Auto-generates if empty / Erstellt bei Leere
+   - Copies to clipboard / In Zwischenablage
+   - Shows confirmation / Bestätigung anzeigen`
 
-## License
-
-`This project is open-source and free to use.`
+`License / Lizenz:
+MIT License - Free use / Freie Nutzung`
