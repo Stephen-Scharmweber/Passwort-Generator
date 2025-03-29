@@ -1,3 +1,19 @@
+"""
+Bulk Password Generator - Create Mass Password Files Securely
+
+Description:
+Python GUI tool to generate thousands of unique random passwords with custom rules.
+Exports passwords to text files for bulk use.
+
+Features:
+- Custom length & character sets
+- Unique password generation
+- Multi-file export
+- Special character support
+
+Keywords: python password generator, bulk passwords, secure passwords, tkinter gui, cybersecurity
+"""
+
 from tkinter import *
 from tkinter import messagebox, filedialog
 import random
